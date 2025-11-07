@@ -60,7 +60,7 @@ $ ./lab4
 | Соя          | Би  |              13000 |                 45 |
 | Чумиза       | З   |               8000 |                 24 |
 | Рис          | З   |              25650 |                 17 |
-+--------------+-----+--------------------+--------------------+\
++--------------+-----+--------------------+--------------------+
 | Примітка: З - зернові, Би - боби                             |
 +--------------------------------------------------------------+
 ```
@@ -72,3 +72,7 @@ As seen in the example above, there is a known alignment issue in the output tab
 This is a classic problem in standard C I/O. The `printf` function, when used with a width specifier like `%-12s`, calculates the width based on the number of **bytes** in the string, not the number of visual **characters**. Since characters in UTF-8 encoding can occupy multiple bytes (e.g., a Cyrillic letter often takes two bytes), the padding is calculated incorrectly, causing the table columns to become misaligned.
 
 Resolving this issue requires more advanced C techniques, such as using wide characters (`wchar_t` and `wprintf`), manually calculating padding based on character counts, or using platform-specific libraries.
+
+## License
+
+This project is licensed under the CSSM Unlimited License v2.0 (CSSM-ULv2). See the [LICENSE](LICENSE) file for details.
